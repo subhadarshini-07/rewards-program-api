@@ -1,0 +1,42 @@
+# Compiled class files
+*.class
+
+# Generated files
+*.log
+*.lock
+/target/
+/bin/
+
+# Package Files
+# .jar, .war, .ear, .zip, .tar.gz, .rar
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# IDE-specific files and directories
+.idea/
+.vscode/
+.settings/
+.project
+.classpath
+*.iml
+*.ipr
+*.iws
+
+# Maven and Gradle files
+pom.xml.tag
+pom.xml.next
+pom.xml.bak
+pom.xml.versions
+pom.xml.stacktrace
+dependency-reduced-pom.xml
+release.properties
+build/
+.gradle/
+out/
+
+# Eclipse
+.metadata
