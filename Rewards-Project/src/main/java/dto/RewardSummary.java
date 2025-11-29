@@ -66,7 +66,6 @@ public class RewardSummary {
 	}
 	public RewardSummary() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	
 	
