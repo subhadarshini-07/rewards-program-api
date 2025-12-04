@@ -12,4 +12,12 @@ public class RewardService {
         }
         return points;
     }
+    public long getCustomerReward(String customerId) {
+    RewardSummary summary = rewardRepository.findByCustomerId(customerId);
+    return summary.getPointsPerMonth()
+                  .values()
+                  .stream()
+                  .mapToLong(Long::longValue)
+                  .sum();
+}
 }
