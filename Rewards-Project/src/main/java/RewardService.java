@@ -2,6 +2,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class RewardService {
+    private final RewardRepository rewardRepository;
+
+    public RewardService(RewardRepository rewardRepository) {
+        this.rewardRepository = rewardRepository;
+    }
     public int calculatePoints(double amount) {
         int points = 0;
         if (amount > 100) {
@@ -11,10 +16,6 @@ public class RewardService {
             points += (int) ((amount - 50) * 1);
         }
         return points;
-    }
-
-    public RewardService(RewardRepository rewardRepository) {
-        this.rewardRepository = rewardRepository;
     }
     public long getCustomerReward(String customerId) {
     RewardSummary summary = rewardRepository.findByCustomerId(customerId);
