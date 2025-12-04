@@ -12,6 +12,10 @@ public class RewardService {
         }
         return points;
     }
+
+    public RewardService(RewardRepository rewardRepository) {
+        this.rewardRepository = rewardRepository;
+    }
     public long getCustomerReward(String customerId) {
     RewardSummary summary = rewardRepository.findByCustomerId(customerId);
     return summary.getPointsPerMonth()
